@@ -15,12 +15,8 @@ function Crypto(){
         }
         cryptoGet();
     },[])
-    if(loading){
-        return (
-            <Loading/>
-        )
-    }else{
-    return(
+    
+    return(loading ? <Loading/>:
     <div className="main-page">
    <div className="container">
     <h1>{coinData.name}</h1>
@@ -50,10 +46,10 @@ function Crypto(){
     </div>
    </div>
    </div>
-)
-    }
-
+    )
 }
+
+
 
 
 export default Crypto;
